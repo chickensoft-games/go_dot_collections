@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Chickensoft.GoDotLog" Version="0.0.4" />
     <PackageReference Include="Chickensoft.GoDotTest" Version="0.0.2" />
+    <PackageReference Include="Shouldly" Version="4.0.3" />
+    <PackageReference Include="Moq" Version="4.17.2" />
+
+    <!-- Include GoDotTest files directly for the sake of coverage -->
+    <!-- https://stackoverflow.com/a/35477501 -->
+    <Compile Include="../src/**/*.cs">
+      <Link>go_dot_collections_test</Link>
+    </Compile>
   </ItemGroup>
 </Project>
