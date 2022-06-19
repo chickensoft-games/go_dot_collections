@@ -26,7 +26,7 @@
     <RepositoryUrl>https://github.com/chickensoft-games/go_dot_collections</RepositoryUrl>
 
     <!-- Don't include the test project -->
-    <DefaultItemExcludes>$(DefaultItemExcludes);go_dot_collections_test/**/*</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);test/**/*</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
