@@ -1,4 +1,4 @@
-namespace GoDotNet {
+namespace GoDotCollections {
   using System;
   using System.Collections;
   using System.Collections.Generic;
