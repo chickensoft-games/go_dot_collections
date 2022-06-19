@@ -7,5 +7,7 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Chickensoft.GoDotTest" Version="0.0.2" />
+  </ItemGroup>
 </Project>
