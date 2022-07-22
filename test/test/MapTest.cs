@@ -36,13 +36,13 @@ internal class MapTest : TestClass {
   [Test]
   public void GetsKeys() {
     var map = new Map<string, int>();
-    map.Keys.ShouldBeAssignableTo<ICollection<string>>();
+    map.Keys.ShouldBeAssignableTo<IEnumerable<string>>();
   }
 
   [Test]
   public void GetsValues() {
     var map = new Map<string, int>();
-    map.Values.ShouldBeAssignableTo<ICollection<int>>();
+    map.Values.ShouldBeAssignableTo<IEnumerable<int>>();
   }
 
   [Test]

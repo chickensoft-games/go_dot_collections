@@ -14,7 +14,7 @@
     <Company>Chickensoft</Company>
 
     <PackageId>Chickensoft.GoDotCollections</PackageId>
-    <PackageVersion>0.0.3</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageReleaseNotes>GoDotCollections release.</PackageReleaseNotes>
     <PackageIcon></PackageIcon>
     <PackageTags>godot;collection;map;insertion order;dictionary;runner;chickensoft;gamedev;utility;utilities</PackageTags>

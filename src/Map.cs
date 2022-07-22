@@ -25,10 +25,10 @@ namespace GoDotCollections {
       get => (TValue)_collection[index];
       set => _collection[index] = value;
     }
-    /// <summary>List of keys.</summary>
-    public ICollection<TKey> Keys => _collection.Keys.OfType<TKey>().ToList();
-    /// <summary>List of values.</summary>
-    public ICollection<TValue> Values => _collection.Values.OfType<TValue>().ToList();
+    /// <summary>Map keys.</summary>
+    public IEnumerable<TKey> Keys => _collection.Keys.Cast<TKey>();
+    /// <summary>Map values.</summary>
+    public IEnumerable<TValue> Values => _collection.Values.Cast<TValue>();
     /// <summary>Whether or not the map is read-only.</summary>
     public bool IsReadOnly => _collection.IsReadOnly;
     /// <summary>Number of key/value pairs in the map.</summary>
@@ -36,7 +36,8 @@ namespace GoDotCollections {
     /// <summary>Map enumerator.</summary>
     public IDictionaryEnumerator GetEnumerator() => _collection.GetEnumerator();
     /// <summary>Insert a key and value at the specified index.</summary>
-    public void Insert(int index, TKey key, TValue value) => _collection.Insert(index, key, value);
+    public void Insert(int index, TKey key, TValue value)
+      => _collection.Insert(index, key, value);
     /// <summary>Remove a key/value pair at the specified index.</summary>
     public void RemoveAt(int index) => _collection.RemoveAt(index);
     /// <summary>True if the given key is in the map.</summary>
@@ -47,7 +48,10 @@ namespace GoDotCollections {
     public void Clear() => _collection.Clear();
     /// <summary>Remove a key/value pair from the map.</summary>
     public void Remove(TKey key) => _collection.Remove(key);
-    /// <summary>Copy the map to an array, beginning at the given index.</summary>
-    public void CopyTo(Array array, int index) => _collection.CopyTo(array, index);
+    /// <summary>
+    /// Copy the map to an array, beginning at the given index.
+    /// </summary>
+    public void CopyTo(Array array, int index)
+      => _collection.CopyTo(array, index);
   }
 }
